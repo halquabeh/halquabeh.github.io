@@ -1,142 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hilal AlQuabeh هلال القوابعة - Personal Website</title>
   <style>
+    :root {
+      --bg: #f4f4f4;
+      --fg: #222;
+      --accent: #0077cc;
+      --nav-bg: #333;
+      --nav-bg2: #444;
+      --card-bg: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
     }
+
     header {
-      background-color: #333;
+      background-color: var(--nav-bg);
       color: #fff;
       text-align: center;
-      padding: 2em 0;
+      padding: 2.5em 1em;
     }
+
+    header h1 {
+      margin: 0 0 0.3em;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      margin: 0.2em 0;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      background-color: #444;
-      padding: 1em 0;
+      background-color: var(--nav-bg2);
+      padding: 0.7em 0.5em;
+      gap: 0.8em;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 1em;
+      padding: 0.3em 0.7em;
+      border-radius: 4px;
     }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5em 1em 3em;
+    }
+
     section {
-      padding: 2em;
+      background: var(--card-bg);
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
     }
+
     h2 {
       margin-top: 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3em;
+      font-size: 1.3rem;
     }
+
     ul {
-      list-style: disc;
-      padding-left: 2em;
+      padding-left: 1.2em;
     }
+
     a {
-      color: #0077cc;
+      color: var(--accent);
       text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .news-item {
+      margin-bottom: 0.7em;
+    }
+
+    .news-date {
+      font-weight: bold;
+      margin-right: 0.4em;
+    }
+
     .publication {
-      margin-bottom: 2em;
+      margin-bottom: 1em;
+    }
+
+    .pub-title {
+      font-weight: bold;
+    }
+
+    .pub-venue {
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Hilal AlQuabeh هلال القوابعة </h1>
-    <p>This page is not updated, please visit <a href="https://sites.google.com/view/alquabeh/home">Google profile</a>.  Welcome to my personal website!</p>
+    <h1>Hilal AlQuabeh هلال محمد القوابعة</h1>
+    <p>Teaching Assistant Professor, Postdoctoral Researcher</p>
+    <p>Department of Natural Language Processing, MBZUAI · RIKEN-Japan</p>
+    <p>Abu Dhabi, UAE · Email: halquabeh (at) gmail (dot) com</p>
   </header>
+
   <nav>
+    <a href="#news">News</a>
     <a href="#background">Background</a>
     <a href="#education">Education</a>
     <a href="#work">Work Experience</a>
     <a href="#publications">Publications</a>
-    <a href="notes.html">Notes</a> <!-- Link to the separate Notes page -->
+    <a href="notes.html">Notes</a>
+    <a href="CV-3.pdf">CV</a>
+    <a href="https://scholar.google.com/citations?user=_vbkrqMAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
   </nav>
-  <section id="background">
-    <h2>Background</h2>
-    <p>PhD student (expected graduation 2024) in machine learning at MBZUAI.</p>
-  </section>
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>PhD student (expected graduation 2024) in Machine Learning at MBZUAI</li>
-      <li>Mechanical Engineering Master's from Masdar Institute and MIT collaboration</li>
-      <li>Bachelor's in Mechanical Engineering from TTU</li>
-    </ul>
-  </section>
-  <section id="work">
-    <h2>Work Experience</h2>
-    <p>Research Assistant (2016-2018) at Masdar Institute. Mechanical Instructor (2018-2021) at the Institute of Applied Technology.</p>
-  </section>
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="publication">
-      <h3>Variable refrigerant flow cooling assessment in humid environment using different refrigerants</h3>
-      <p>R Saab, H Al Quabeh, MIH Ali</p>
-      <p>Journal of Environmental Management 224, 243-251, 2018</p>
-    </div>
-    <div class="publication">
-      <h3>Chilled water storage feasibility with district cooling chiller in tropical environment</h3>
-      <p>H Al Quabeh, R Saab, MIH Ali</p>
-      <p>Journal of Sustainable Development of Energy, Water and Environment Systems, 2020</p>
-    </div>
-    <div class="publication">
-      <h3>Investigating a Baseline Of Self Supervised Learning Towards Reducing Labeling Costs For Image Classification</h3>
-      <p>H AlQuabeh, A Bawazeer, A Alhashmi</p>
-      <p>arXiv preprint arXiv:2108.07464, 2021</p>
-    </div>
-    <div class="publication">
-      <h3>Computational Complexity of Sub-Linear Convergent Algorithms</h3>
-      <p>H AlQuabeh, F AlBreiki, D Azizov</p>
-      <p>arXiv preprint arXiv:2209.14558, 2022</p>
-    </div>
-    <div class="publication">
-      <h3>Pairwise Learning via Stagewise Training in Proximal Setting</h3>
-      <p>H AlQuabeh, A Abdurahimov</p>
-      <p>arXiv preprint arXiv:2208.04075, 2022</p>
-    </div>
-    <div class="publication">
-      <h3>Limited Memory Online Gradient Descent for Kernelized Pairwise Learning with Dynamic Averaging</h3>
-      <p>Your Authors</p>
-      <p>In the 38th AAAI Conference on Artificial Intelligence (AAAI-24)</p>
-    </div>
-    <div class="publication">
-      <h3>Variance Reduced Online Gradient Descent for Kernelized Pairwise Learning with Limited Memory</h3>
-      <p>Your Authors</p>
-      <p>In ACML 2023 - The 15th Asian Conference on Machine Learning</p>
-    </div>
-    <div class="publication">
-      <h3>Certified Adversarial Robustness for Rate Encoded Spiking Neural Networks</h3>
-      <p>Hilal AlQuabeh, Bhaskar Mukhoty, Giulia De Masi, Huan Xiong, Bin Gu</p>
-      <p>The Twelfth International Conference on Learning Representations, 2024</p>
-    </div>
-    <div class="publication">
-      <h3>Limited Memory Online Gradient Descent for Kernelized Pairwise Learning with Dynamic
-Averaging</h3>
-      <p>H AlQuabeh, William de Vazelhes, B Gu</p>
-      <p>AAAI, 2024</p>
-    </div>
-    <div class="publication">
-      <h3>Lotus at WojoodNER Shared Task: Multilingual Transformers: Unveiling Flat and Nested
-Entity Recognition</h3>
-      <p>J Li, D Azizov, H AlQuabeh, S Liang</p>
-      <p>ArabicNLP, 2023</p>
-    </div>
-        <div class="publication">
-      <h3>Advanced NLP Techniques for Summarizing Multilingual Financial Narratives from Global
-Annual Reports</h3>
-      <p> Dilshod Azizov, Jiyong Li, Hilal AlQuabeh, and Shangsong
-Liang</p>
-      <p>FNP, 2023,</p>
-    </div>
-    <p>For more details, check my <a href="https://scholar.google.com/citations?user=_vbkrqMAAAAJ&hl=en&authuser=1">Google Scholar profile</a>.</p>
-  </section>
+
+  <main>
+    <section id="news">
+      <h2>News</h2>
+
+      <div class="news-item">
+        <span class="news-date">May 2025</span>
+        Our paper <em>"Where Grokking Happens: Mechanistic Insights at the Embedding Layer"</em> is now live.
+      </div>
+
+      <div class="news-item">
+        <span class="news-date">April 2025</span>
+        Nominated as the founding Chair of the Postdoctoral Research Council at MBZUAI.
+      </div>
+
+      <div class="news-item">
+        <span class="news-date">April 2025</span>
+        Delivered a masterclass on AI in Crisis Management at the Global Summit on Crisis and Emergency Management in Abu Dhabi.
+      </div>
+
+      <div class="news-item">
+        <span class="news-date">February 2025</span>
+        Research on number representations of LLMs is now on ArXiv.
+      </div>
+
+      <!-- You can keep adding more items here as in your Google Site -->
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <p>
+        I am a postdoctoral researcher in Natural Language Processing at MBZUAI, specializing in
+        machine learning optimization and interpretability. My work spans state-space models,
+        neural network optimization, and advancing AI robustness.
+      </p>
+      <p>
+        Previously, I completed my PhD in Machine Learning at MBZUAI and an MSc in Mechanical
+        Engineering from the joint MIT–Masdar Institute program.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>PhD in Machine Learning, MBZUAI, 2024</li>
+        <li>MSc in Mechanical Engineering, Masdar Institute &amp; MIT collaboration, 2018</li>
+        <li>BSc in Mechanical Engineering, TTU, 2015</li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>Postdoctoral Researcher, MBZUAI (present)</li>
+        <li>Mechanical Instructor, Institute of Applied Technology (2018–2021)</li>
+        <li>Research Assistant, Masdar Institute (2016–2018)</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications</h2>
+
+      <div class="publication">
+        <div class="pub-title">Certified Adversarial Robustness for Rate Encoded Spiking Neural Networks</div>
+        <div>Hilal AlQuabeh, Bhaskar Mukhoty, Giulia De Masi, Huan Xiong, Bin Gu</div>
+        <div class="pub-venue">The Twelfth International Conference on Learning Representations (ICLR), 2024</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Limited Memory Online Gradient Descent for Kernelized Pairwise Learning with Dynamic Averaging</div>
+        <div>H. AlQuabeh, William de Vazelhes, Bin Gu</div>
+        <div class="pub-venue">AAAI Conference on Artificial Intelligence, 2024</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Variance Reduced Online Gradient Descent for Kernelized Pairwise Learning with Limited Memory</div>
+        <div>H. AlQuabeh et al.</div>
+        <div class="pub-venue">Asian Conference on Machine Learning (ACML), 2023</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Lotus at WojoodNER Shared Task: Multilingual Transformers: Unveiling Flat and Nested Entity Recognition</div>
+        <div>J. Li, D. Azizov, H. AlQuabeh, S. Liang</div>
+        <div class="pub-venue">ArabicNLP, 2023</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Advanced NLP Techniques for Summarizing Multilingual Financial Narratives from Global Annual Reports</div>
+        <div>D. Azizov, J. Li, H. AlQuabeh, S. Liang</div>
+        <div class="pub-venue">FNP, 2023</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Pairwise Learning via Stagewise Training in Proximal Setting</div>
+        <div>H. AlQuabeh, A. Abdurahimov</div>
+        <div class="pub-venue">arXiv preprint arXiv:2208.04075, 2022</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Computational Complexity of Sub-Linear Convergent Algorithms</div>
+        <div>H. AlQuabeh, F. AlBreiki, D. Azizov</div>
+        <div class="pub-venue">arXiv preprint arXiv:2209.14558, 2022</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Investigating a Baseline Of Self Supervised Learning Towards Reducing Labeling Costs For Image Classification</div>
+        <div>H. AlQuabeh, A. Bawazeer, A. Alhashmi</div>
+        <div class="pub-venue">arXiv preprint arXiv:2108.07464, 2021</div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Chilled water storage feasibility with district cooling chiller in tropical environment</div>
+        <div>H. Al Quabeh, R. Saab, M. I. H. Ali</div>
+        <div class="pub-venue">
+          Journal of Sustainable Development of Energy, Water and Environment Systems, 2020
+        </div>
+      </div>
+
+      <div class="publication">
+        <div class="pub-title">Variable refrigerant flow cooling assessment in humid environment using different refrigerants</div>
+        <div>R. Saab, H. Al Quabeh, M. I. H. Ali</div>
+        <div class="pub-venue">Journal of Environmental Management 224, 243–251, 2018</div>
+      </div>
+
+      <p>For a full and up-to-date list, please see my
+        <a href="https://scholar.google.com/citations?user=_vbkrqMAAAAJ" target="_blank" rel="noopener">
+          Google Scholar profile
+        </a>.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
