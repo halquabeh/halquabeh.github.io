@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hilal AlQuabeh هلال القوابعة - Personal Website</title>
+  <title>
+    Hilal AlQuabeh هلال القوابعة - Personal Website (maintained at Google Sites)
+  </title>
   <style>
     :root {
       --bg: #f4f4f4;
@@ -31,7 +33,7 @@
       background-color: var(--nav-bg);
       color: #fff;
       text-align: center;
-      padding: 2.5em 1em;
+      padding: 2.5em 1em 2em;
     }
 
     header h1 {
@@ -46,6 +48,19 @@
     header a {
       color: #fff;
       text-decoration: underline;
+    }
+
+    .maintained-notice {
+      margin-top: 0.8em;
+      padding: 0.6em 0.9em;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .maintained-notice strong {
+      font-weight: 700;
     }
 
     nav {
@@ -123,9 +138,34 @@
       font-style: italic;
     }
 
+    /* Pop-out button to maintained Google Site */
+    .popout-link {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      background: #0077cc;
+      color: #fff;
+      padding: 0.7em 1.1em;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
+
+    .popout-link:hover {
+      background: #005fa0;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.4rem;
+      }
+      .popout-link {
+        right: 0.6rem;
+        bottom: 0.6rem;
+        font-size: 0.85rem;
+        padding: 0.6em 0.9em;
       }
     }
   </style>
@@ -136,6 +176,15 @@
     <p>Teaching Assistant Professor, Postdoctoral Researcher</p>
     <p>Department of Natural Language Processing, MBZUAI · RIKEN-Japan</p>
     <p>Abu Dhabi, UAE · Email: halquabeh (at) gmail (dot) com</p>
+
+    <p class="maintained-notice">
+      <strong>This is an archived mirror.</strong>
+      The maintained website is
+      <a href="https://sites.google.com/view/alquabeh/home" target="_blank" rel="noopener">
+        https://sites.google.com/view/alquabeh/home
+      </a>
+      (opens in a new tab).
+    </p>
   </header>
 
   <nav>
@@ -152,28 +201,22 @@
   <main>
     <section id="news">
       <h2>News</h2>
-
       <div class="news-item">
         <span class="news-date">May 2025</span>
         Our paper <em>"Where Grokking Happens: Mechanistic Insights at the Embedding Layer"</em> is now live.
       </div>
-
       <div class="news-item">
         <span class="news-date">April 2025</span>
         Nominated as the founding Chair of the Postdoctoral Research Council at MBZUAI.
       </div>
-
       <div class="news-item">
         <span class="news-date">April 2025</span>
         Delivered a masterclass on AI in Crisis Management at the Global Summit on Crisis and Emergency Management in Abu Dhabi.
       </div>
-
       <div class="news-item">
         <span class="news-date">February 2025</span>
         Research on number representations of LLMs is now on ArXiv.
       </div>
-
-      <!-- You can keep adding more items here as in your Google Site -->
     </section>
 
     <section id="background">
@@ -279,5 +322,15 @@
       </p>
     </section>
   </main>
+
+  <!-- Pop-out button to maintained Google Site -->
+  <a
+    href="https://sites.google.com/view/alquabeh/home"
+    class="popout-link"
+    target="_blank"
+    rel="noopener"
+  >
+    Open maintained site
+  </a>
 </body>
 </html>
